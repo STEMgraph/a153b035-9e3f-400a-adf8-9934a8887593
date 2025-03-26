@@ -7,45 +7,47 @@
 }
 --->
 
-# Learning Through Exercises
+# Viewing PDF-Files in xpdf
 
 ## 1) Introduction
-Learning by doing is one of the most effective methods to acquire new knowledge and skills. Rather than passively consuming information, actively engaging in problem-solving fosters deeper understanding and long-term retention. By working through structured exercises, students can grasp complex concepts in a more intuitive and applicable way. This approach is particularly beneficial in technical fields like programming, mathematics, and engineering.
+When the widespread use of graphical terminals became common in the early 1990s, portability issues began to emerge. Documents created on a specific computer were not necessarily portable to other platforms. Here, portability means that the layout intended by the author might not display correctly on another user's system. As long as people used simple .txt files on text-based terminals, this wasn't a problem. However, graphical shells allowed images and complex layouts, introducing significant customization—and with it, compatibility—problems.
+
+Adobe addressed these compatibility issues by developing a file format designed to preserve document fidelity across platforms. They named it the Portable Document Format, or PDF for short. PDFs provided three key features that ensured consistent renderings without drastically inflating file sizes:
+
+Embedding graphics and fonts directly within the document.
+
+Offering cross-platform reader software—initially Adobe Acrobat.
+
+Allowing document protection against unauthorized modification.
+
+Adobe Acrobat, the original PDF creation and viewing software, was developed using C++ and was commercially distributed by Adobe. To facilitate wider adoption and ensure that PDFs could be easily accessed by everyone, Adobe later released a free variant named Adobe Acrobat Reader.
+
+On Linux systems, a powerful yet simple open-source alternative to Adobe Acrobat Reader emerged: xpdf. This lightweight PDF viewer provides a reliable and efficient way to read PDF documents directly from the Linux command line or graphical desktop environment. In this section, you'll learn how to utilize xpdf to seamlessly display, navigate, and manage PDF documents within Linux.
 
 ### 1.1) Further Readings and Other Sources
-- [The Importance of Practice in Learning](https://www.sciencedirect.com/science/article/pii/S036013151300062X)
-- "The Art of Learning" by Josh Waitzkin
-- [How to Learn Effectively: 5 Key Strategies](https://www.edutopia.org/article/5-research-backed-learning-strategies)
+
+- [Official Xpdf Documentation](https://www.xpdfreader.com/man.html)
+- [Adobe PDF Reference and Specifications](https://opensource.adobe.com/dc-acrobat-sdk-docs/pdfstandards/)
 
 ## 2) Tasks
-1. **Write a Summary**: Summarize the concept of "learning by doing" in 3-5 sentences.
-2. **Example Identification**: List three examples from your own experience where learning through exercises helped you understand a topic better.
-3. **Create an Exercise**: Design a simple exercise for a topic of your choice that someone else could use to practice.
-4. **Follow an Exercise**: Find an online tutorial that includes exercises and complete at least two of them.
-5. **Modify an Existing Exercise**: Take a basic problem from a textbook or online course and modify it to make it slightly more challenging.
-6. **Pair Learning**: Explain a concept to a partner and guide them through an exercise without giving direct answers.
-7. **Review Mistakes**: Look at an exercise you've previously completed incorrectly. Identify why the mistake happened and how to prevent it in the future.
-8. **Time Challenge**: Set a timer for 10 minutes and try to solve as many simple exercises as possible on a given topic.
-9. **Self-Assessment**: Create a checklist to evaluate your own performance in completing exercises effectively.
-10. **Reflect on Progress**: Write a short paragraph on how this structured approach to exercises has influenced your learning.
-
-<details>
-  <summary>Tip for Task 5</summary>
-  Try making small adjustments first, such as increasing the difficulty slightly or adding an extra constraint.
-</details>
+1. **Check DISPLAY Variable**: Open your terminal and verify if your `DISPLAY` variable is set correctly. Run `printenv` or `echo $DISPLAY` for that.
+2. **Test Connection with xeyes**: Use the `xeyes` program from the x11-apps toolkit to test your X11 server connection.
+3. **Install xpdf**: Use your preferred package manager to install the `xpdf` package or compile it from source.
+4. **Display a PDF File**: Use `xpdf <filename>.pdf` to open and view a PDF document. If you don't have a PDF file at hand, you can download a simple one from [here](https://constitutioncenter.org/media/files/constitution.pdf). To download a file into your `~`-directory, use `wget https://constitutioncenter.org/media/files/constitution.pdf`.
+5. **Use poppler-utils**: Use the `pdftotext <filename>.pdf` command from the `poppler-utils` package to convert a PDF to text.
 
 ## 3) Questions
-1. What are the main benefits of learning through exercises compared to passive learning?
-2. How do exercises improve long-term retention?
-3. Can you think of a subject where learning through exercises might be less effective? Why?
-4. What role does feedback play in learning through exercises?
-5. How can self-designed exercises improve understanding?
-6. Why is it beneficial to review past mistakes in exercises?
-7. How does explaining a concept to someone else reinforce your own understanding?
-8. What strategies can you use to stay motivated when practicing with exercises?
-9. How can timed challenges contribute to learning efficiency?
-10. How do exercises help bridge the gap between theory and practical application?
+1. Which command displays all environment variables?
+2. How can you filter and display specific environment variables using command-line tools?
+3. Which command would you use to show the value of a single environment variable?
+4. What content does your `DISPLAY` variable currently hold?
+5. Describe what happens when a user-program displays something using the X11 protocol.
+6. What output do you get when running `xpdf --version`?
+7. What happens when running `xpdf -z 8`?
+8. Compare the outputs of `xpdf -z 50` and `xpdf -z 150`.
+9. What is the effect of running `xpdf -rv`?
+10. Explain what the command `pdftotext <filename>` does.
 
 ## 4) Advice
-Practice consistently and seek out diverse exercises that challenge different aspects of a topic. Combine exercises with reflection and feedback to maximize your learning efficiency. Don't hesitate to adapt exercises to fit your own needs and ensure that you're actively engaging with the material, rather than just going through the motions.
+When working with PDFs on the command line using tools like `xpdf` and `poppler-utils`, always familiarize yourself with the available command-line options by using the `--help` option (e.g., `xpdf --help`). Mastering these commands will greatly enhance your efficiency in managing and processing PDF documents directly from your terminal.
 

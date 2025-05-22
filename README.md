@@ -52,3 +52,4 @@ On Linux systems, a powerful yet simple open-source alternative to Adobe Acrobat
 ## 4) Advice
 When working with PDFs on the command line using tools like `xpdf` and `poppler-utils`, always familiarize yourself with the available command-line options by using the `--help` option (e.g., `xpdf --help`). Mastering these commands will greatly enhance your efficiency in managing and processing PDF documents directly from your terminal.
 
+Kleine Änderung für PP5 von MikailGtheG

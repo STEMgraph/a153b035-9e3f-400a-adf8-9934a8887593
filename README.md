@@ -1,6 +1,7 @@
 <!---
 {
   "id": "a153b035-9e3f-400a-adf8-9934a8887593",
+  "teaches": "Viewing PDF-Files in xpdf",
   "depends_on": [],
   "author": "Stephan Bökelmann",
   "first_used": "2025-03-17",
